@@ -42,6 +42,10 @@ module Resque
         classes.first.clear
       end
 
+      def self.each(*args, &block)
+        classes.first.each(*args, &block)
+      end
+
       def self.requeue(*args)
         classes.first.requeue(*args)
       end
